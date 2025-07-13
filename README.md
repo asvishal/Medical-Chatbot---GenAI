@@ -44,7 +44,7 @@ medical-chatbot-genai/
 | pathlib, os, logging     | For filesystem operations and logging during setup                 | 
 
 # 🧠 How It Works
-✅ Embedding & Indexing
+# ✅ Embedding & Indexing
 PDFs in Data/ are loaded and split into chunks.
 
 Each chunk is embedded using HuggingFace embeddings.
@@ -53,13 +53,13 @@ These embeddings are indexed into Pinecone with cosine similarity as the metric.
 
 File: store_index.py
 
-🔗 Retrieval-Augmented Generation (RAG)
+# 🔗 Retrieval-Augmented Generation (RAG)
 On receiving a user query from the UI, relevant chunks are retrieved from Pinecone.
 
 These are passed to the LLM with a system prompt to generate a contextual, reliable response.
 
 File: app.py
 
-🗨️ Prompt Engineering
+# 🗨️ Prompt Engineering
 Prompts are configured in src/prompt.py to instruct the LLM with the right persona and scope for reliable answers.
 
